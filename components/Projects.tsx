@@ -106,7 +106,7 @@ const selectedProjects: SelectedProject[] = [
     tags: ["C++", "SFML", "ImGui", "ECS"],
     media: {
       title: "One Man Army - Gameplay",
-      videoId: "qAjsH7YrajQ",
+      videoId: "kkJ6LuliTpA",
     },
     actions: [
       {
@@ -116,7 +116,7 @@ const selectedProjects: SelectedProject[] = [
         caption:
           "Complete gameplay trailer showcasing combat, level progression, and enemy AI.",
       },
-      { label: "Presentation", href: "https://www.youtube.com/watch?v=kkJ6LuliTpA", tone: "primary" },
+      { label: "Presentation", href: "https://www.youtube.com/watch?v=aJQrVvM_b1g", tone: "primary" },
     ],
   },
   {
@@ -166,7 +166,7 @@ const selectedProjects: SelectedProject[] = [
     actions: [
       {
         label: "Presentation",
-        href: youtubeEmbedUrl(GYM_PRESENTATION_VIDEO_ID),
+        href:  "https://www.youtube.com/watch?v=P8wDpish9nA",
         tone: "primary",
       },
       {
