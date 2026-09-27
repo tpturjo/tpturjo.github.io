@@ -88,7 +88,7 @@ const spotlightProjects: SpotlightProject[] = [
   },
 ];
 
-const LAST_FIRE_VIDEO_ID = "qAjsH7YrajQ";
+const LAST_FIRE_VIDEO_ID = "P8wDpish9nA";
 const GYM_PRESENTATION_VIDEO_ID = "P8wDpish9nA";
 
 function youtubeEmbedUrl(videoId: string) {
@@ -105,12 +105,12 @@ const selectedProjects: SelectedProject[] = [
     tags: ["C++", "SFML", "ImGui", "ECS"],
     media: {
       title: "One Man Army - Gameplay",
-      videoId: "jVIg-RZK4C4",
+      videoId: "qAjsH7YrajQ",
     },
     actions: [
       {
         label: "Trailer ▶",
-        href: "https://www.youtube.com/watch?v=kkJ6LuliTpA",
+        href: "https://www.youtube.com/watch?v=qAjsH7YrajQ",
         title: "One Man Army - Trailer",
         caption:
           "Complete gameplay trailer showcasing combat, level progression, and enemy AI.",
@@ -144,7 +144,7 @@ const selectedProjects: SelectedProject[] = [
     actions: [
       {
         label: "Gameplay ▶",
-        href: youtubeEmbedUrl(LAST_FIRE_VIDEO_ID),
+        href: "https://www.youtube.com/watch?v=P8wDpish9nA",
         title: "The Last Fire - Gameplay Demo",
         caption: "Gameplay video.",
       },
