@@ -16,6 +16,7 @@ type VideoAction = {
 type MediaPreview = {
   title: string;
   videoId: string;
+  embedSrc?: string;
 };
 
 type SpotlightProject = {
@@ -88,7 +89,7 @@ const spotlightProjects: SpotlightProject[] = [
   },
 ];
 
-const LAST_FIRE_VIDEO_ID = "P8wDpish9nA";
+const LAST_FIRE_VIDEO_ID = "qAjsH7YrajQ";
 const GYM_PRESENTATION_VIDEO_ID = "P8wDpish9nA";
 
 function youtubeEmbedUrl(videoId: string) {
@@ -110,12 +111,12 @@ const selectedProjects: SelectedProject[] = [
     actions: [
       {
         label: "Trailer ▶",
-        href: "https://www.youtube.com/watch?v=qAjsH7YrajQ",
+        href: "https://www.youtube.com/watch?v=kkJ6LuliTpA",
         title: "One Man Army - Trailer",
         caption:
           "Complete gameplay trailer showcasing combat, level progression, and enemy AI.",
       },
-      { label: "Presentation", href: "https://youtu.be/aJQrVvM_b1g", tone: "primary" },
+      { label: "Presentation", href: "https://www.youtube.com/watch?v=kkJ6LuliTpA", tone: "primary" },
     ],
   },
   {
@@ -144,7 +145,7 @@ const selectedProjects: SelectedProject[] = [
     actions: [
       {
         label: "Gameplay ▶",
-        href: "https://www.youtube.com/watch?v=P8wDpish9nA",
+        href: "https://www.youtube.com/watch?v=qAjsH7YrajQ",
         title: "The Last Fire - Gameplay Demo",
         caption: "Gameplay video.",
       },
@@ -550,7 +551,7 @@ function MediaFrame({ media }: { media: MediaPreview }) {
     <div className="mb-space-md overflow-hidden rounded border border-border-hairline bg-surface-subtle">
       <iframe
         className="aspect-video w-full"
-        src={youtubeEmbedUrl(media.videoId)}
+        src={media.embedSrc ?? youtubeEmbedUrl(media.videoId)}
         title={media.title}
         loading="lazy"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
