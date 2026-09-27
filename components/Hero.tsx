@@ -279,14 +279,16 @@ export default function Hero() {
               <ArrowForwardIcon />
             </a>
             <a
-              href="#contact"
+              href="/resume/Tridib-Paul-Turjo-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-space-xs rounded border border-border-hairline bg-surface-card px-5 py-2.5 font-label-nav text-label-nav text-ink-primary no-underline transition-colors duration-200 hover:border-forest-moss hover:text-forest-moss"
             >
               <span>Resume (PDF)</span>
               <ArrowOutIcon />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/tpturjo"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-1.5 rounded px-4 py-2.5 font-meta-mono text-meta-mono font-medium text-ink-secondary no-underline decoration-border-hairline underline-offset-4 transition-colors duration-200 hover:text-forest-moss hover:underline hover:decoration-forest-moss"

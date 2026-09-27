@@ -61,10 +61,6 @@ const featured: FeaturedRole[] = [
       "Worked with real coded research data, effect-size calculations, multilevel meta-analysis, model outputs, and statistical visualizations, while also presenting the research in both technical and plain-language formats.",
     ],
     tags: ["R", "Quarto", "Meta-analysis", "Statistical Analysis", "Data Visualization"],
-    link: {
-      href: "https://github.com/jmfawcet/weaponfocus_pvt",
-      label: "repo: weaponfocus_pvt",
-    },
   },
   {
     organization: "Target Marketing & Communications",

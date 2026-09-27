@@ -88,6 +88,13 @@ const spotlightProjects: SpotlightProject[] = [
   },
 ];
 
+const LAST_FIRE_VIDEO_ID = "qAjsH7YrajQ";
+const GYM_PRESENTATION_VIDEO_ID = "P8wDpish9nA";
+
+function youtubeEmbedUrl(videoId: string) {
+  return `https://www.youtube-nocookie.com/embed/${videoId}`;
+}
+
 const selectedProjects: SelectedProject[] = [
   {
     index: "03 · Game Development · Interactive Systems · 2024",
@@ -132,9 +139,16 @@ const selectedProjects: SelectedProject[] = [
     tags: ["Three.js", "JavaScript", "Finite State Machines", "Steering Behaviours"],
     media: {
       title: "The Last Fire - Gameplay Demo",
-      videoId: "qAjsH7YrajQ",
+      videoId: LAST_FIRE_VIDEO_ID,
     },
-    actions: [],
+    actions: [
+      {
+        label: "Gameplay ▶",
+        href: youtubeEmbedUrl(LAST_FIRE_VIDEO_ID),
+        title: "The Last Fire - Gameplay Demo",
+        caption: "Gameplay video.",
+      },
+    ],
   },
   {
     index: "06 · Data Analytics · Trend Analysis · 2024",
@@ -146,9 +160,14 @@ const selectedProjects: SelectedProject[] = [
     tags: ["Python", "Pandas", "Regression", "Interactive Visualization"],
     media: {
       title: "Community Gym Insights - Presentation Video",
-      videoId: "P8wDpish9nA",
+      videoId: GYM_PRESENTATION_VIDEO_ID,
     },
     actions: [
+      {
+        label: "Presentation",
+        href: youtubeEmbedUrl(GYM_PRESENTATION_VIDEO_ID),
+        tone: "primary",
+      },
       {
         label: "GitHub",
         href: "https://github.com/tpturjo/Community-Gym-Insights-Dashboard",
@@ -187,7 +206,7 @@ const additionalProjects: AdditionalProject[] = [
           "Virtual portfolio simulation, REST API quote streaming, and unit test execution suite in Node.js / Express.",
       },
     ],
-    links: [{ label: "GitHub", href: "https://github.com/tpturjo/Stock-Trading-game-", tone: "forest" }],
+    links: [{ label: "GitHub", href: "https://github.com/tpturjo/Stock-Trading-game", tone: "forest" }],
   },
   {
     index: "09 · Game Systems · 2023",
@@ -216,6 +235,9 @@ const additionalProjects: AdditionalProject[] = [
     note: "Java Swing OOP",
   },
 ];
+
+const actionRowClass =
+  "mt-space-md flex flex-wrap items-center gap-x-space-md gap-y-2 border-t border-border-hairline pt-space-sm font-meta-mono text-label-code";
 
 const presentationLinks: PendingLink[] = [
   {
@@ -414,25 +436,18 @@ export default function Projects() {
 }
 
 function AdditionalFooter({ project }: { project: AdditionalProject }) {
-  const resourceLinks = project.links.filter((link) => link.label !== "GitHub");
-  const github = project.links.find((link) => link.label === "GitHub");
+  const hasResources = (project.videos?.length ?? 0) > 0 || project.links.length > 0 || Boolean(project.note);
+  if (!hasResources) return null;
 
   return (
-    <div className="flex items-center justify-between gap-2 border-t border-border-hairline pt-2 font-meta-mono text-label-code">
-      <div className="flex min-w-0 flex-wrap items-center gap-3">
-        {project.videos?.map((action) => (
-          <VideoButton key={action.label} action={action} />
-        ))}
-        {resourceLinks.map((link) => (
-          <PendingLinkView key={link.label} link={link} />
-        ))}
-        {project.note ? <span className="text-[11px] text-ink-muted">{project.note}</span> : null}
-      </div>
-      {github ? (
-        <span className="ml-auto">
-          <PendingLinkView link={github} />
-        </span>
-      ) : null}
+    <div className={actionRowClass}>
+      {project.videos?.map((action) => (
+        <VideoButton key={action.label} action={action} />
+      ))}
+      {project.links.map((link) => (
+        <PendingLinkView key={link.label} link={link} />
+      ))}
+      {project.note ? <span className="text-[11px] text-ink-muted">{project.note}</span> : null}
     </div>
   );
 }
@@ -446,26 +461,17 @@ function ActionRow({
 }) {
   const videos = actions.filter(isVideoAction);
   const textLinks = [...links, ...actions.filter((action): action is PendingLink => !isVideoAction(action))];
-  const resourceLinks = textLinks.filter((link) => link.label !== "GitHub");
-  const github = textLinks.find((link) => link.label === "GitHub");
 
-  if (videos.length === 0 && resourceLinks.length === 0 && !github) return null;
+  if (videos.length === 0 && textLinks.length === 0) return null;
 
   return (
-    <div className="mt-space-md flex flex-wrap items-center justify-between gap-3 border-t border-border-hairline pt-space-sm font-meta-mono text-label-code">
-      <div className="flex min-w-0 flex-wrap items-center gap-x-space-md gap-y-2">
-        {videos.map((action) => (
-          <VideoButton key={action.label} action={action} />
-        ))}
-        {resourceLinks.map((link) => (
-          <PendingLinkView key={link.label} link={link} />
-        ))}
-      </div>
-      {github ? (
-        <span className="ml-auto">
-          <PendingLinkView link={github} />
-        </span>
-      ) : null}
+    <div className={actionRowClass}>
+      {videos.map((action) => (
+        <VideoButton key={action.label} action={action} />
+      ))}
+      {textLinks.map((link) => (
+        <PendingLinkView key={link.label} link={link} />
+      ))}
     </div>
   );
 }
@@ -544,7 +550,7 @@ function MediaFrame({ media }: { media: MediaPreview }) {
     <div className="mb-space-md overflow-hidden rounded border border-border-hairline bg-surface-subtle">
       <iframe
         className="aspect-video w-full"
-        src={`https://www.youtube-nocookie.com/embed/${media.videoId}`}
+        src={youtubeEmbedUrl(media.videoId)}
         title={media.title}
         loading="lazy"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
