@@ -49,7 +49,7 @@ type AdditionalProject = {
 
 const spotlightProjects: SpotlightProject[] = [
   {
-    index: "01 · Honours Thesis · Research Software · 2025–2026",
+    index: "01 · Honours Thesis · Research Software · 2026",
     name: "Nature’s Palette",
     tagline:
       "“From a browser-based spectral repository to programmable research infrastructure.”",
@@ -98,7 +98,7 @@ function youtubeEmbedUrl(videoId: string) {
 
 const selectedProjects: SelectedProject[] = [
   {
-    index: "03 · Game Development · Interactive Systems · 2024",
+    index: "03 · Game Development · Interactive Systems · 2025",
     name: "One Man Army",
     tagline: "“A complete top-down action game engineered without a commercial game engine.”",
     description:
@@ -120,7 +120,7 @@ const selectedProjects: SelectedProject[] = [
     ],
   },
   {
-    index: "04 · Database Engineering · Relational Modelling · 2024",
+    index: "04 · Database Engineering · Relational Modelling · 2025",
     name: "Child Welfare Database System",
     tagline: "“Connecting complex child-welfare data through a structured relational model.”",
     description:
@@ -131,7 +131,7 @@ const selectedProjects: SelectedProject[] = [
     ],
   },
   {
-    index: "05 · Behavioural AI · Autonomous Systems · 2024",
+    index: "05 · Behavioural AI · Autonomous Systems · 2025",
     name: "The Last Fire: Horizon’s Reach",
     tagline:
       "“A browser-based survival game where autonomous creatures react to the player and environment.”",
@@ -210,7 +210,7 @@ const additionalProjects: AdditionalProject[] = [
     links: [{ label: "GitHub", href: "https://github.com/tpturjo/Stock-Trading-game", tone: "forest" }],
   },
   {
-    index: "09 · Game Systems · 2023",
+    index: "09 · Game Systems · 2024",
     name: "Apódosi",
     description:
       "Feature-rich 2D RPG developed as a team project. My work focused on collision response, animation, camera behaviour, particle effects, and UI/HUD systems while contributing to the integration of the game’s broader combat, physics, abilities, and visual systems.",
@@ -226,7 +226,7 @@ const additionalProjects: AdditionalProject[] = [
     links: [],
   },
   {
-    index: "10 · Object-Oriented Programming · 2023",
+    index: "10 · Object-Oriented Programming · 2022",
     name: "Simple ATM Application",
     description:
       "Desktop ATM simulation built around object-oriented design, separating accounts, transactions, and interface behaviour through encapsulation, inheritance, abstraction, and polymorphism with a Java Swing interface.",
