@@ -40,7 +40,7 @@ export default function About() {
                 />
               </div>
               <figcaption className="px-space-sm pt-space-sm text-center font-meta-mono text-meta-mono text-ink-muted motion-safe:transition-colors motion-safe:duration-[280ms] motion-safe:ease-out group-hover:text-ink-secondary">
-                Niagara Falls, Ontario · 2022
+                Niagara Falls, Ontario
               </figcaption>
               <span
                 aria-hidden="true"

@@ -299,28 +299,16 @@ function ElsewhereIntro() {
       </p>
       <div className="mt-space-md grid grid-cols-1 gap-x-gutter-desktop gap-y-space-md md:grid-cols-2 md:gap-y-space-lg">
         <p className="font-sans text-body-md leading-relaxed text-ink-secondary">
-          A lot of that starts with just going somewhere. I like walking around, exploring places I haven&apos;t seen
-          before, and taking photos along the way. Street photography is probably what I enjoy most. I tend to
-          photograph streets, people, colours, buildings, and small everyday moments that catch my attention. I&apos;ve
-          taken photos in Bangladesh,
-          around Newfoundland, and in other places I&apos;ve had the chance to visit. I like the idea of keeping little
-          pieces of wherever I happen to be.
+          Outside of work, I'm usually out somewhere, walking with my camera, looking for things worth keeping. Street photography is what I enjoy most. I'm drawn to streets, people, colours, buildings, and the small everyday moments that most people walk past. I've taken photos in Bangladesh, around Newfoundland, and in other places I've had the chance to visit, and each photo is a small piece of wherever I was.
         </p>
         <p className="font-sans text-body-md leading-relaxed text-ink-secondary">
-          Food fits into that naturally too. I barely cooked before moving away from home. Once I started missing
-          Bangladeshi food and some of the meals I grew up with, I began learning how to make a few of them myself.
-          Over time, cooking became something I actually enjoyed. Now, trying a new cuisine, finding somewhere good to
-          eat, or making something myself is often part of how I experience a place.
+          Food is part of that too. I barely cooked before I moved away from home. When I started missing Bangladeshi food and the meals I grew up with, I taught myself to make them, and over time cooking became something I genuinely love. Now trying a new cuisine, finding somewhere good to eat, or making something myself is a big part of how I experience a place.
         </p>
         <p className="font-sans text-body-md leading-relaxed text-ink-secondary">
-          At home, I have two cats, Rhaenys and Vivi, who mostly seem convinced that the house belongs to them. They
-          have very different personalities, which probably explains why they ended up with their own little collection
-          here.
+          At home, I have two cats, Rhaenys and Vivi, who are both convinced the house belongs to them. I live on my own, so they're my family here. They're the ones who say hello every time I get home, and it's the best part of walking through the door. They have very different personalities, which is probably why they ended up with their own little collection here.
         </p>
         <p className="font-sans text-body-md leading-relaxed text-ink-secondary">
-          I also play a little guitar. I mostly taught myself the basics, enough to play songs I like when I feel like
-          it. I&apos;ve never treated it as anything particularly serious, and I think that&apos;s part of why I still
-          enjoy it.
+          I grew up in a family where music and the arts were part of everyday life, so I tried a bit of everything as a kid: singing, art, and tabla, a South Asian hand drum. None of it stuck, but I never stopped listening to music. A lot of that listening eventually turned into learning guitar on my own. I'm still a beginner, and I play for me: songs I love, whenever I feel like it.
         </p>
       </div>
       <div className="mt-space-lg border-t border-border-hairline pt-space-md">

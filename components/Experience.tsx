@@ -70,7 +70,7 @@ const featured: FeaturedRole[] = [
     datesMuted: true,
     arrangement: "8-month Co-op",
     paragraphs: [
-      "Worked across multiple client projects in a fast-paced agency environment, developing and improving production websites while coordinating closely with clients, account teams, developers, and project leads. Each project came with different requirements and deadlines, so the role involved understanding what was needed, implementing it carefully, and making sure changes were ready for production.",
+      "Built and maintained production websites for multiple agency clients, working with account teams, developers, and project leads to understand requirements, implement changes carefully, and get work production-ready on tight deadlines.",
       "The work also went beyond the websites themselves. I worked with external APIs, processed and cleaned data for operational needs, and used automation to make recurring tasks easier. For example, I built a workflow that tracked photo-licensing information and automatically notified the responsible team members when a license was approaching its expiry date.",
     ],
     tags: [
