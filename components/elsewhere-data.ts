@@ -59,7 +59,7 @@ export const elsewhereCollections: readonly ElsewhereCollection[] = [
     name: "Roots",
     line: "Where the story started.",
     coverTitle: "Sonar Bangla",
-    coverCaption: "The sky the country is named for.",
+    coverCaption: "The golden sky Bengal is named for.",
     featuredPosition: "center 50%",
     slicePosition: "center 52%",
     photographs: [
