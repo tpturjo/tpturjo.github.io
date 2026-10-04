@@ -167,7 +167,7 @@ const technical: TechnicalRole[] = [
 const community: CommunityRole[] = [
   {
     organization: "Kelly Professional & Industrial",
-    title: "Translator",
+    title: "Interpreter",
     dates: "May 2024 to August 2024",
     arrangement: "Contract · Full-time · Remote",
     description:
