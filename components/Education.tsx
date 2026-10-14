@@ -35,6 +35,27 @@ const honours = [
   },
 ] as const;
 
+const certifications = [
+  {
+    title: "AWS Certified AI Practitioner",
+    issuer: "Amazon Web Services",
+    level: "Foundational",
+    issued: "Sep 2026",
+    expires: "Sep 2029",
+    badge: "/education/aws-ai-practitioner.png",
+    verifyHref: "https://www.credly.com/badges/b952d4f1-2753-458f-9045-9b7d227991e3/public_url",
+  },
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    level: "Foundational",
+    issued: "Oct 2026",
+    expires: "Oct 2029",
+    badge: "/education/aws-cloud-practitioner.png",
+    verifyHref: "https://www.credly.com/badges/6ffbd498-7b92-4405-8637-755f12423743/public_url",
+  },
+] as const;
+
 function finePointer() {
   return window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 }
@@ -172,7 +193,7 @@ export default function Education() {
           <span className="mb-1 block font-meta-mono text-label-code tracking-widest text-forest-moss uppercase">
             Academic Background
           </span>
-          <h2 className="font-serif text-headline-lg text-ink-primary">Education & Honours</h2>
+          <h2 className="font-serif text-headline-lg text-ink-primary">Education & Credentials</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-gutter-desktop lg:grid-cols-12">
@@ -290,6 +311,58 @@ export default function Education() {
                   onPointerLeave={() => leavePreview(item.image)}
                   onToggle={() => togglePreview(item.image)}
                 />
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-space-xl">
+          <span className="mb-space-sm block font-meta-mono text-label-code tracking-widest text-forest-moss uppercase">
+            Professional Certifications
+          </span>
+          <div className="grid grid-cols-1 gap-space-md md:grid-cols-2">
+            {certifications.map((cert) => (
+              <article
+                key={cert.title}
+                className="flex items-center gap-space-md rounded border border-border-hairline bg-surface-card p-4 transition-[border-color,transform,box-shadow] duration-[240ms] ease-out hover:border-forest-moss motion-safe:hover:-translate-y-px motion-safe:hover:shadow-[0_2px_8px_rgb(24_24_27_/_0.06)]"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={cert.badge}
+                  alt={`${cert.title} badge`}
+                  width={56}
+                  height={56}
+                  className="size-14 shrink-0 object-contain"
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1 flex flex-wrap items-center gap-2">
+                    <span className="font-meta-mono text-label-code font-semibold text-forest-moss uppercase">
+                      Professional Certification
+                    </span>
+                    <span className="text-border-hairline" aria-hidden="true">
+                      ·
+                    </span>
+                    <span className="font-meta-mono text-meta-mono font-medium text-forest-moss">
+                      {cert.issued}
+                    </span>
+                  </div>
+                  <h3 className="font-serif text-body-lg font-semibold text-ink-primary">{cert.title}</h3>
+                  <div className="mt-1 flex flex-wrap items-baseline justify-between gap-x-space-md gap-y-1">
+                    <p className="font-sans text-body-sm text-ink-secondary">
+                      {cert.issuer} · {cert.level} · Valid to {cert.expires}
+                    </p>
+                    <a
+                      href={cert.verifyHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Verify ${cert.title} on Credly`}
+                      className="inline-flex items-center gap-1 font-meta-mono text-label-code font-medium text-forest-moss no-underline hover:text-forest-deep focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-[3px] focus-visible:outline-forest-moss"
+                    >
+                      Verify
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
